@@ -1,0 +1,13 @@
+.hoverDiv:hover{
+    /* font-size: 15px; */
+      color:aquamarine;
+      background-color: rgba(0, 0, 0, 0.301);
+}
+.hoverDiv{
+    border-radius:30px;
+    font-size: 14px;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
