@@ -15,12 +15,19 @@ import Axios from '../content/DataFetching/Axios';
 import tanstack from '../content/DataFetching/Tanstack';
 import Reactquery from '../content/DataFetching/Reactquery';
 import Reactfetch from '../content/DataFetching/Reactrefetch';
+import FontAwesome from '../content/iconLibrary/FontAwesome';
+import MaterailIcons from '../content/iconLibrary/Material';
+import ReacIcons from '../content/iconLibrary/ReactIcons';
+import ReactLucide from '../content/iconLibrary/ReactLuicide';
+import ReactLuicide from '../content/iconLibrary/ReactLuicide'
+import ReactIcons from '../content/iconLibrary/ReactIcons'
+import Material from '../content/iconLibrary/Material'
 
 
 
 function LibraryCont({ libraryInfo }) {
   return (
-    <div className='' >
+    <div className='text-lg' >
       {
         libraryInfo === "Material" && (
           <>
@@ -67,35 +74,35 @@ function LibraryCont({ libraryInfo }) {
         libraryInfo === "reactspring" && (
           <>
 
-         <ReactSpring />
+            <ReactSpring />
           </>
         )
       }
       {
         libraryInfo === "reactfiber" && (
           <>
-         <ReactFiber/>
+            <ReactFiber />
           </>
         )
       }
       {
         libraryInfo === "reactrouter" && (
           <>
-           <ReactRouter />
+            <ReactRouter />
           </>
         )
       }
       {
         libraryInfo === "wonder" && (
           <>
-           <Wouter />
+            <Wouter />
           </>
         )
       }
       {
         libraryInfo === "reactnavir" && (
           <>
-          <ReactNavi />
+            <ReactNavi />
           </>
         )
       }
@@ -109,28 +116,56 @@ function LibraryCont({ libraryInfo }) {
       {
         libraryInfo === "axios" && (
           <>
-         <Axios/>
+            <Axios />
           </>
         )
       }
       {
         libraryInfo === "tanstackqueryno" && (
           <>
-              <h5 className='text-shadow-red-600 underline'>under maintainance </h5>
+            <h5 className='text-shadow-red-600 underline'>under maintainance </h5>
           </>
         )
       }
       {
         libraryInfo === "reactquery-no" && (
           <>
-         <Reactquery/>
+            <Reactquery />
           </>
         )
       }
       {
         libraryInfo === "reactfetch-no" && (
           <>
-         <Reactfetch/>
+            <Reactfetch />
+          </>
+        )
+      }
+      {
+        libraryInfo === "fontawesome" && (
+          <>
+            <FontAwesome />
+          </>
+        )
+      }
+      {
+        libraryInfo === "reactlucide" && (
+          <>
+            <ReactLuicide />
+          </>
+        )
+      }
+      {
+        libraryInfo === "reactIcons" && (
+          <>
+             <ReactIcons />
+          </>
+        )
+      }
+      {
+        libraryInfo === "Materialicons" && (
+          <>
+              <Material />
           </>
         )
       }

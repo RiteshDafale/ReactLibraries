@@ -1,12 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+import copy from 'copy-to-clipboard';
+import { msg } from 'E:/Naresh IT/Reactjs/Projects/allinOnelibrary/src/Component/MessageComp/CopyMessage';
 
 function ReactFiber() {
   return (
-    <div className="min-h-screen bg-black text-white font-sans px-6 py-2 space-y-8">
+    <div className="min-h-screen bg-black text-white px-6 py-2 font-sans">
       {/* Header */}
-      <h2 className='text-center '>Getting started with Spring Fiber</h2>
+      <h4 className='text-center mt-3'>Getting started with Spring Fiber</h4>
       <div>
         <h3 className="text-5xl font-bold">Installation</h3>
         <p className="text-gray-400 text-lg mt-2">
@@ -14,10 +15,13 @@ function ReactFiber() {
         </p>
       </div>
 
-      {/* Install Command */}
-      <div className="bg-gray-900 border border-gray-700 rounded-md p-4 font-mono text-green-400 text-sm flex items-center justify-between">
-        <code>npm install three @react-three/fiber</code>
-        <button className="text-gray-400 hover:text-white">📋</button>
+      <div className="bg-gray-800 rounded px-4 py-3 font-mono text-sm text-gray-200 mb-6 relative flex align-center justify-between">
+        <code id="code">npm install three @react-three/fiber </code>
+        <button onClick={(e) => {
+          const copytext = document.getElementById("code");
+          copy(copytext.innerHTML)
+          msg();
+        }}>copy</button>
       </div>
 
       {/* Warning Box */}
@@ -47,7 +51,7 @@ function ReactFiber() {
           <li><a href="#" className="text-blue-400 hover:underline">React Native</a></li>
         </ul>
       </div>
-      <p>for more Visit : <Link className='fw-bold hover:underline-offset-1' to="https://r3f.docs.pmnd.rs/getting-started/installation" role='button'><span className="fw-bold underline text-cyan-200 ms-2">React Fiber</span> </Link></p>
+      <p className='mt-3 '>for more Visit : <Link className='fw-bold  text-white  ' style={{ textDecoration: "dotted" }} to="https://r3f.docs.pmnd.rs/getting-started/installation" role='button'> <span className="fw-bold no-underline hover:underline hover:text-base">React Fiber</span> </Link></p>
     </div>
   )
 }

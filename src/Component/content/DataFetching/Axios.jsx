@@ -1,21 +1,23 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import copy from 'copy-to-clipboard';
+import { msg } from 'E:/Naresh IT/Reactjs/Projects/allinOnelibrary/src/Component/MessageComp/CopyMessage';
 
 function Axios() {
   return (
     <div className="min-h-screen bg-black text-white px-6 py-2 font-sans">
-      <h2 className="text-center font-bold mb-2">Getting Started with Axios</h2>
+      <h4 className="text-center underline font-bold mb-2">Getting Started with Axios</h4>
       <section className="mb-10">
-        <h4 className="text-3xl mt-3 font-semibold mb-2">What is Axios?</h4>
+        <h4 className="text-3xl mt-3 font-semibold my-3 ms-2.5">What is Axios?</h4>
         <p className="text-lg mb-2">
-          Axios is a{" "}
-          <span className="italic text-blue-600">promise-based</span> HTTP
+          {" "}
+          <span className="italic text-amber-300">Axios is a promise-based</span> HTTP
           Client for{" "}
           <span className="bg-purple-100 text-purple-800 px-1 rounded font-mono">
             node.js
           </span>{" "}
           and the browser. It is{" "}
-          <span className="italic text-blue-600">isomorphic</span> (= it can run
+          <span className="italic text-amber-300">isomorphic</span> ( it can run
           in the browser and nodejs with the same codebase). On the server-side
           it uses the native node.js{" "}
           <span className="bg-purple-100 text-purple-800 px-1 rounded font-mono">
@@ -30,23 +32,44 @@ function Axios() {
         <div className="space-y-8">
           <div>
             <p className="mb-2 text-lg">Using npm:</p>
-            <pre className="bg-gray-800 text-purple-400 rounded-md p-4 overflow-x-auto">
-              <code>$ <span className="text-purple-300">npm install</span> axios</code>
-            </pre>
+            <div className="bg-gray-800 rounded px-4 py-3 font-mono text-sm text-gray-200 mb-6 relative flex align-center justify-between">
+              <code id="code">npm install axios</code>
+              <button onClick={(e) => {
+                const copytext = document.getElementById("code");
+                copy(copytext.innerHTML)
+                msg();
+              }}>copy</button>
+            </div>
           </div>
 
           <div>
             <p className="mb-2 text-lg">Using bower:</p>
-            <pre className="bg-gray-800 text-purple-400 rounded-md p-4 overflow-x-auto">
+            {/* <pre className="bg-gray-800 text-purple-400 rounded-md p-4 overflow-x-auto">
               <code>$ <span className="text-purple-300">bower install</span> axios</code>
-            </pre>
+            </pre> */}
+
+            <div className="bg-gray-800 rounded px-4 py-3 font-mono text-sm text-gray-200 mb-6 relative flex align-center justify-between">
+              <code id="code1">bower install axios</code>
+              <button onClick={(e) => {
+                const copytext = document.getElementById("code1");
+                copy(copytext.innerHTML)
+                msg();
+              }}>copy</button>
+            </div>
+
           </div>
 
           <div>
             <p className="mb-2 text-lg">Using yarn:</p>
-            <pre className="bg-gray-800 text-purple-400 rounded-md p-4 overflow-x-auto">
-              <code>$ <span className="text-purple-300">yarn add</span> axios</code>
-            </pre>
+            <div className="bg-gray-800 rounded px-4 py-3 font-mono text-sm text-gray-200 mb-6 relative flex align-center justify-between">
+              <code id="code2">yarn add axios</code>
+              <button onClick={(e) => {
+                const copytext = document.getElementById("code2");
+                copy(copytext.innerHTML)
+                msg();
+              }}>copy</button>
+            </div>
+
           </div>
 
           <div>
@@ -135,7 +158,7 @@ function Axios() {
             </a>
           </li>
         </ul>
-          <p className='mt-3'>for more Visit : <Link className='fw-bold hover:underline-offset-1' to="https://axios-http.com/docs/intro" role='button'><span className="fw-bold underline text-cyan-200 ms-2">Axios</span> </Link></p>
+        <p className='mt-3 '>for more Visit : <Link className='fw-bold  text-white  ' style={{ textDecoration: "dotted" }} to="https://axios-http.com/docs/intro" role='button'> <span className="fw-bold no-underline hover:underline hover:text-base">Axios</span> </Link></p>
       </section>
 
     </div>

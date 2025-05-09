@@ -105,10 +105,22 @@ function LibraryName({ libraryName }) {
             {
                 libraryName === "Icons" && (
                     <div className=' text-center h-100  w-full max-w-[173px] mx-auto' style={{}}>
-                        <div className='border-b p-1 cursor-pointer hover:border-2' > Font Awesome</div>
-                        <div className='border-b p-1 cursor-pointer hover:border-2' >react lucide Icons</div>
-                        <div className='border-b p-1 cursor-pointer hover:border-2' >react Icons</div>
-                        <div className='border-b p-1 cursor-pointer hover:border-2' >Material Icons</div>
+                        <div className='border-b p-1 cursor-pointer hover:border-2' 
+                         onClick={() => {                             
+                            setlibraryInfo("fontawesome")
+                        }}> Font Awesome</div>
+                        <div className='border-b p-1 cursor-pointer hover:border-2' 
+                         onClick={() => {                             
+                          setlibraryInfo("reactlucide")
+                        }}>react lucide Icons</div>
+                        <div className='border-b p-1 cursor-pointer hover:border-2' 
+                         onClick={() => {                             
+                             setlibraryInfo("reactIcons")
+                        }}>react Icons</div>
+                        <div className='border-b p-1 cursor-pointer hover:border-2'
+                         onClick={() => {                             
+                          setlibraryInfo("Materialicons")
+                        }} >Material Icons</div>
                     </div>
                 )
             }
