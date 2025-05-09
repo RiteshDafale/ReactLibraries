@@ -1,12 +1,15 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import copy from 'copy-to-clipboard';
 import {msg} from 'E:/Naresh IT/Reactjs/Projects/allinOnelibrary/src/Component/MessageComp/CopyMessage';
 import { Link } from 'react-router-dom'
 
 function FontAwesome() {
+   useEffect(() => {
+          document.title = "React - Font Awesome"
+      })
   return (
     <div className="bg-black text-white min-h-screen p-6 space-y-2 font-sans">
-      <h3 className='text-center underline'>Font Awesome Icons</h3>
+      <h4 className='text-center underline'>Font Awesome Icons</h4>
       <section>
         <h4 className="text-4xl font-bold my-4 ms-3">Quick Start</h4>
         <p className="text-lg font-medium">
